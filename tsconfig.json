@@ -1,14 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/Users/paulhayes/code/astro/first-project",
     "paths": {
       "@/*": [
         "./src/*"
       ],
       "~/*": [
         "./public/*"
-      ],
-    }
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
