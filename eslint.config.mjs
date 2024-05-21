@@ -1,7 +1,6 @@
-import eslintPluginAstro from 'eslint-plugin-astro';
 import eslintjs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import eslintPluginAstro from 'eslint-plugin-astro';
 
 export default [
 	// add more generic rule sets here, such as:
@@ -17,5 +16,4 @@ export default [
 			'no-unused-vars': 'warn',
 		},
 	},
-	eslintPluginPrettierRecommended,
 ];
