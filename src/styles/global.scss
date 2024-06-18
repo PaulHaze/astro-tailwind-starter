@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		@apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50;
+	}
 	h1 {
 		@apply text-4xl font-normal leading-normal;
 	}
