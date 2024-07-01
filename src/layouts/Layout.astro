@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '@/components/ui/ThemeToggle.astro';
+
 interface Props {
 	title: string;
 }
@@ -18,7 +20,10 @@ import '@/styles/global.scss';
 		<script is:inline src="/js/theme.js"></script>
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative">
+		<div class="absolute right-1 top-1 z-[99]">
+			<ThemeToggle />
+		</div>
 		<slot />
 	</body>
 </html>
