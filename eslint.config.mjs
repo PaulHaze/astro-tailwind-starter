@@ -7,6 +7,7 @@ export default [
 	// js.configs.recommended,
 	// eslintjs.configs.recommended,
 	...tseslint.configs.recommended,
+	...tseslint.configs.stylistic,
 	...eslintPluginAstro.configs.recommended,
 	{
 		// override/add rules settings here, such as:
