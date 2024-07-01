@@ -1,0 +1,22 @@
+---
+import { cn } from '@/utils';
+---
+
+<button
+	id="header-theme-button"
+	aria-label={`Toggle light and dark theme`}
+	class={cn(
+		'flex',
+		'size-9 rounded-full p-2 items-center justify-center',
+		'hover:bg-black/5 dark:hover:bg-white/20',
+		'stroke-current hover:stroke-black hover:dark:stroke-white',
+		'transition-colors duration-300 ease-in-out'
+	)}
+>
+	<svg class="block size-full bg-transparent dark:hidden">
+		<use href="/ui.svg#sun"></use>
+	</svg>
+	<svg class="hidden size-full bg-transparent dark:block">
+		<use href="/ui.svg#moon"></use>
+	</svg>
+</button>
