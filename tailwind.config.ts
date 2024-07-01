@@ -1,10 +1,16 @@
 import type { Config } from 'tailwindcss';
+import typographyPlugin from '@tailwindcss/typography';
+import daisyui from 'daisyui';
+
+// Uncomment this to customise themes via the spread operator
+// eg: ...themes.dark
+// import themes from 'daisyui/src/theming/themes';
 
 import plugin from 'tailwindcss/plugin';
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: 'selector',
+	darkMode: ['selector', '[data-theme="dark"]'],
 	theme: {
 		fontSize: {
 			xs: '0.75rem',
@@ -42,6 +48,17 @@ export default {
 			center: true,
 		},
 		extend: {
+			colors: {
+				primary: {
+					muted: 'oklch(var(--primary-muted) / <alpha-value>)',
+				},
+				base: {
+					DEFAULT: 'oklch(var(--base-100-oklch) / <alpha-value>)',
+					100: 'oklch(var(--base-100-oklch) / <alpha-value>)',
+					// 200: 'oklch(var(--base-200-oklch) / <alpha-value>)',
+					// 300: 'oklch(var(--base-300-oklch) / <alpha-value>)',
+				},
+			},
 			minWidth: {
 				xs: '431px',
 				sm: '640px',
@@ -73,7 +90,10 @@ export default {
 			},
 		},
 	},
+
 	plugins: [
+		typographyPlugin,
+		daisyui,
 		plugin(({ addUtilities, matchUtilities, theme }) => {
 			addUtilities({
 				'.flex-center': {
@@ -135,4 +155,93 @@ export default {
 			);
 		}),
 	],
+	daisyui: {
+		themes: [
+			{
+				light: {
+					primary: '#71c4ef',
+					secondary: '#d4eaf7',
+					accent: '#00668c',
+					neutral: '#454b4e',
+					'base-100': '#fffefb',
+					'base-200': '#f5f4f1',
+					'base-300': '#edede9',
+					'--primary-muted-oklch': '83.24% 0.029 231.52',
+					'--base-100-oklch': '99.7% 0.004 91.45',
+					// '--base-200-oklch': '96.71% 0.004 91.45',
+					// '--base-300-oklch': '84.2% 0.004 91.45',
+					/* 
+					*EXAMPLE - ESSENTIAL
+					"primary": "#a991f7",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+
+					*EXAMPLE - FULL SET
+					* These extra colours are set automatically based on the colours chosen above
+					* But they can be overriden
+					primary: '#a991f7',
+					"primary-content": "#d0e3ff", - Colour of text in 'Primary'
+					secondary: '#f6d860'
+					"secondary-content": "#0a0900", - Colour of text in 'Secondary'
+					accent: '#37cdbe'
+					"accent-content": "#00050d",- Colour of text in 'Accent'
+					neutral: '#828282'
+					"neutral-content": "#d2cdd2", - Colour of text in 'Neutral
+					'base-100': '#fefefe'
+					"base-200": "#dbdbdb", - Slightly darker shade of base-100
+					"base-300": "#bbbbbb", - Even darker shade of base-100
+					"base-content": "#161616", - Contrasting colour for text on base-100
+
+					* Additional colours to be added if needed
+					"info": "#00b1ff",
+					"info-content": "#000c16",
+					"success": "#85ee00",
+					"success-content": "#061400",
+					"warning": "#c28700",
+					"warning-content": "#0e0600",
+					"error": "#ff768e",
+					"error-content": "#160507",
+
+
+					* Additional CSS variables used
+          "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
+          "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
+          "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
+          "--animation-btn": "0.25s", // duration of animation when you click on button
+          "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
+          "--btn-focus-scale": "0.95", // scale transform of button when you focus on it
+          "--border-btn": "1px", // border width of buttons
+          "--tab-border": "1px", // border width of tabs
+          "--tab-radius": "0.5rem", // border radius of tabs */
+				},
+			},
+			{
+				dark: {
+					primary: '#4d648d',
+					secondary: '#1F3A5F',
+					accent: '#cee8ff',
+					neutral: '#454b4e',
+					'base-100': '#0F1C2E',
+					'base-200': '#1f2b3e',
+					'base-300': '#374357',
+					'--primary-muted-oklch': '81.3% 0.068 264.49',
+					'--base-100-oklch': '22.45% 0.04 256.74',
+					//* Custom colour variables can also be added.
+					//* Use the OKLCH colour space
+					//* Add the variable to Tailwind
+					// '--primary-muted-oklch': '83.24% 0.029 231.52',
+				},
+			},
+		],
+		// false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"],
+		darkTheme: 'dark', // name of one of the included themes for dark mode
+		base: true, // applies background color and foreground color for root element by default
+		styled: true, // include daisyUI colors and design decisions for all components
+		utils: true, // adds responsive and modifier utility classes
+		prefix: '', // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+		logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
+		themeRoot: ':root', // The element that receives theme color CSS variables
+	},
 } satisfies Config;
