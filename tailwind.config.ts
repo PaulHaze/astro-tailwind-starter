@@ -49,9 +49,7 @@ export default {
 		},
 		extend: {
 			colors: {
-				primary: {
-					muted: 'oklch(var(--primary-muted) / <alpha-value>)',
-				},
+				'primary-muted': 'oklch(var(--primary-muted-oklch) / <alpha-value>)',
 				base: {
 					DEFAULT: 'oklch(var(--base-100-oklch) / <alpha-value>)',
 					100: 'oklch(var(--base-100-oklch) / <alpha-value>)',
@@ -219,14 +217,14 @@ export default {
 			},
 			{
 				dark: {
-					primary: '#4d648d',
+					primary: '#456bad',
 					secondary: '#1F3A5F',
 					accent: '#cee8ff',
 					neutral: '#454b4e',
 					'base-100': '#0F1C2E',
 					'base-200': '#1f2b3e',
 					'base-300': '#374357',
-					'--primary-muted-oklch': '81.3% 0.068 264.49',
+					'--primary-muted-oklch': '60.03% 0.0497 261.59',
 					'--base-100-oklch': '22.45% 0.04 256.74',
 					//* Custom colour variables can also be added.
 					//* Use the OKLCH colour space

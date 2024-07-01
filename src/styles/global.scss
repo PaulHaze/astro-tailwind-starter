@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-	* {
-		@apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50;
-	}
 	h1 {
 		@apply text-4xl font-normal leading-normal;
 	}
@@ -21,12 +18,50 @@
 	h5 {
 		@apply text-lg font-normal leading-normal;
 	}
+	.bg-primary * {
+		@apply text-primary-content/90;
+	}
+	.bg-secondary * {
+		@apply text-secondary-content/90;
+	}
+	.bg-accent * {
+		@apply text-accent-content;
+	}
+	.bg-neutral * {
+		@apply text-neutral-content;
+	}
+	.bg-info * {
+		@apply text-info-content/90;
+	}
+	.bg-success * {
+		@apply text-success-content/90;
+	}
+	.bg-warning * {
+		@apply text-warning-content/90;
+	}
+	.bg-error * {
+		@apply text-error-content/90;
+	}
 }
 
 @layer components {
 }
 
 @layer utilities {
+	.dark-gradient {
+		background: linear-gradient(
+			transparent 0%,
+			transparent 37%,
+			rgba(0, 0, 0, 0.2) 100%
+		);
+	}
+	.light-gradient {
+		background: linear-gradient(
+			transparent 0%,
+			transparent 57%,
+			rgba(0, 0, 0, 0.1) 100%
+		);
+	}
 	.bb {
 		@apply border border-red-600 sm:border-blue-600 md:border-green-600 lg:border-black;
 	}
