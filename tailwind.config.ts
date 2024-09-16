@@ -12,18 +12,6 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkMode: ['selector', '[data-theme="dark"]'],
 	theme: {
-		fontSize: {
-			xs: '0.75rem',
-			sm: '0.875rem',
-			base: '1rem',
-			lg: '1.125rem',
-			xl: '1.25rem',
-			'2xl': '1.5rem',
-			'3xl': '1.875rem',
-			'4xl': '2.25rem',
-			'5xl': '3rem',
-			'6xl': '4rem',
-		},
 		screens: {
 			xs: '431px',
 			sm: '640px',
@@ -48,6 +36,9 @@ export default {
 			center: true,
 		},
 		extend: {
+			fontSize: {
+				banner: '9rem',
+			},
 			colors: {
 				'primary-muted': 'oklch(var(--primary-muted-oklch) / <alpha-value>)',
 				base: {
@@ -80,6 +71,10 @@ export default {
 				xl: '8rem',
 				'2xl': '16rem',
 				'4xl': '32rem',
+				'18': '4.5rem',
+			},
+			borderRadius: {
+				half: '50%',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -112,14 +107,14 @@ export default {
 						'border-color': 'rgb(81, 142, 227)',
 					},
 					'@media (min-width: 1024px)': {
-						'border-color': 'rgb(220, 38, 38)',
+						'border-color': 'rgb(37, 99, 235)',
 					},
 					'@media (min-width: 1280px)': {
-						'border-color': 'rgb(37, 99, 235)',
+						'border-color': 'rgb(220, 38, 38)',
 					},
 				},
 				'.bb2': {
-					borderWidth: '1px',
+					borderWidth: '2px',
 					'border-color': '#3b82f6',
 
 					'@media (min-width: 431px)': {
