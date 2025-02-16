@@ -21,7 +21,7 @@ import { cn } from '@/utils';
 	</svg>
 </button>
 
-<script>
+<script is:inline>
 	function changeTheme() {
 		const element = document.documentElement;
 		const theme = element.classList.contains('dark') ? 'light' : 'dark';
