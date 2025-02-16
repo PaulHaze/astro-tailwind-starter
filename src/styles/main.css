@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "daisyui";
 
 /* CUSTOM STYLES */
 /* @import './custom/theme-toggle.css'; */
