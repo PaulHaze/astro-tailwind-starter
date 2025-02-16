@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import '@/styles/global.scss';
+import '@/styles/main.css';
 ---
 
 <!doctype html>
@@ -20,7 +20,7 @@ import '@/styles/global.scss';
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<div class="absolute right-1 top-1 z-[99]">
+		<div class="absolute top-1 right-1 z-[99]">
 			<ThemeToggle />
 		</div>
 		<slot />
