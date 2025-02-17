@@ -8,8 +8,7 @@
   --font-techno: var(--font-nabla);
 */
 
-	--color-base: var(--color-base);
-	--color-base-content: var(--color-base-content);
+	--color-base: var(--color-base-100);
 
 	/* Add a small breakpoint for mobile */
 	--breakpoint-xs: 29rem;
@@ -29,12 +28,15 @@
 	--spacing-slg: 64rem;
 	--spacing-sxl: 80rem;
 	--spacing-s2xl: 96rem;
-	/* --glass-blur	blur of the glass effect
-	--glass-opacity	opacity of the glass effect
-	--glass-reflect-degree	degree of the glass reflection
-	--glass-reflect-opacity	opacity of the glass reflection
-	--glass-border-opacity	opacity of the glass border
-	--glass-text-shadow-opacity	opacity of the glass text shadow */
+
+	/* DaisyUI Glass Variables */
+	--glass-blur: 10px;
+	/* change % value to anything else to remove divider effect */
+	--glass-opacity: 20%;
+	--glass-reflect-degree: 105deg;
+	--glass-reflect-opacity: 4%;
+	--glass-border-opacity: 10%;
+	--glass-text-shadow-opacity: 30%;
 }
 
 @layer base {
@@ -93,25 +95,15 @@
 @utility bb {
 	@apply border border-red-600 sm:border-blue-600 md:border-green-600 lg:border-indigo-600 xl:border-pink-600;
 }
-
 @utility bb2 {
 	@apply border border-green-600 sm:border-red-600 md:border-blue-600 lg:border-pink-600 xl:border-indigo-600;
 }
-
 @utility flex-center {
 	@apply flex items-center justify-center;
 }
 
-/* Plugins */
-@plugin "@tailwindcss/typography";
-
-@plugin "daisyui" {
-	root: ':root';
-	include: button, glass, typography;
-	logs: true;
-}
-
-/* Every dark theme color for easy customization */
+/* 
+DAISY THEME EXAMPLES
 @plugin 'daisyui/theme' {
 	name: 'dark';
 	default: false;
@@ -154,7 +146,6 @@
 	--noise: 0;
 }
 
-/* Every light theme color for easy customization */
 @plugin 'daisyui/theme' {
 	name: 'light';
 	default: false;
@@ -195,4 +186,16 @@
 	--border: 2px;
 	--depth: 1;
 	--noise: 0;
+}
+*/
+
+@plugin "@tailwindcss/typography";
+
+@plugin "daisyui" {
+	themes:
+		light --default,
+		dark --prefersdark;
+	root: ':root';
+	include: button, glass, typography;
+	logs: true;
 }
