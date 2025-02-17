@@ -3,16 +3,17 @@
 @variant dark (&:where([data-theme="dark"] *));
 
 @theme inline {
-	/* 
-  ADD THIS FOR CUSTOM FONT USE
-  --font-techno: var(--font-nabla);
-*/
+	/* Custom Fonts */
+	--font-sans: 'Noto Sans Variable', sans-serif;
+	--font-header: 'Anton', sans-serif;
 
+	/* Colors */
 	--color-base: var(--color-base-100);
 
 	/* Add a small breakpoint for mobile */
 	--breakpoint-xs: 29rem;
 
+	/* Extra Text Sizes */
 	--text-6xl: 4rem;
 
 	/* Custom padding settings */
@@ -36,7 +37,7 @@
 	--glass-reflect-degree: 105deg;
 	--glass-reflect-opacity: 4%;
 	--glass-border-opacity: 10%;
-	--glass-text-shadow-opacity: 30%;
+	--glass-text-shadow-opacity: 10%;
 }
 
 @layer base {
