@@ -23,5 +23,5 @@ updates:
     reviewers:
       - 'PaulHaze'
     labels:
-  - 'dependencies'
-  - 'automerge'
+      - 'dependencies'
+      - 'automerge'
