@@ -14,7 +14,7 @@ updates:
       separator: '-'
     commit-message:
       prefix: 'chore(deps)'
-    rebase-strategy: 'enabled'
+    rebase-strategy: 'auto'
     allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
