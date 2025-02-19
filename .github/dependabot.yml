@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
+  - package-ecosystem: 'npm'
     directory: '/' # Location of package manifests
     schedule:
       interval: 'daily'
@@ -15,8 +15,6 @@ updates:
     commit-message:
       prefix: 'chore(deps)'
     rebase-strategy: 'auto'
-    labels:
-      - 'dependencies'
     allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
