@@ -9,6 +9,19 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'daily'
-    target-branch: 'main'
+    open-pull-requests-limit: 10
+    pull-request-branch-name:
+      separator: '-'
+    commit-message:
+      prefix: 'chore(deps)'
+    rebase-strategy: 'auto'
+    labels:
+      - 'dependencies'
     allow:
-      - dependency-type: 'all'
+      - dependency-type: 'direct'
+      - dependency-type: 'development'
+    reviewers:
+      - 'PaulHaze'
+    labels:
+  - 'dependencies'
+  - 'automerge'
