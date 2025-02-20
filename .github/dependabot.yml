@@ -18,8 +18,6 @@ updates:
     allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
-    reviewers:
-      - 'PaulHaze'
     labels:
       - 'dependencies'
       - 'automerge'
