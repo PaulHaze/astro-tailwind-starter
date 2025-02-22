@@ -18,6 +18,7 @@ updates:
     allow:
       - dependency-type: 'direct'
       - dependency-type: 'development'
+    versioning-strategy: increase-if-necessary
     labels:
       - 'dependencies'
       - 'automerge'
