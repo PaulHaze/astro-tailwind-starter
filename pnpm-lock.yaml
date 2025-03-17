@@ -19,7 +19,7 @@ importers:
         version: 5.1.1
       '@fontsource/anton':
         specifier: ^5.1.1
-        version: 5.1.1
+        version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.8
         version: 4.0.8(vite@6.1.1(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.85.0)(yaml@2.7.0))
@@ -446,8 +446,8 @@ packages:
   '@fontsource-variable/noto-sans@5.1.1':
     resolution: {integrity: sha512-hO0ywqmXLSU2C++B/FQeklo/zBSQZhHJef6ik/lJNaPmagpdHkHgQb1zwMuC9pdTv7UZeuGp38ML19w2AzM0kw==}
 
-  '@fontsource/anton@5.1.1':
-    resolution: {integrity: sha512-PbKqw6qNhRkyf7TRLS1JoQR7fp504o60VveuzFOO3SO33lsfE6GqEdDeVd1LLePKWkgHxIpU0ypW3pNu1unrQg==}
+  '@fontsource/anton@5.2.5':
+    resolution: {integrity: sha512-nrydB9HkZiFN7VaFwSFnJW9BhrRmbt1/2sb7wm8pw0OQ3tWzfIKDG634qv6kX1047SCP/037qhWX+Eoh+oxLGA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4000,7 +4000,7 @@ snapshots:
 
   '@fontsource-variable/noto-sans@5.1.1': {}
 
-  '@fontsource/anton@5.1.1': {}
+  '@fontsource/anton@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 
