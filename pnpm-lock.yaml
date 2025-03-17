@@ -16,7 +16,7 @@ importers:
         version: 4.2.0(@types/node@22.13.4)(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.0)(yaml@2.7.0)
       '@fontsource-variable/noto-sans':
         specifier: ^5.1.1
-        version: 5.1.1
+        version: 5.2.6
       '@fontsource/anton':
         specifier: ^5.1.1
         version: 5.1.1
@@ -443,8 +443,8 @@ packages:
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource-variable/noto-sans@5.1.1':
-    resolution: {integrity: sha512-hO0ywqmXLSU2C++B/FQeklo/zBSQZhHJef6ik/lJNaPmagpdHkHgQb1zwMuC9pdTv7UZeuGp38ML19w2AzM0kw==}
+  '@fontsource-variable/noto-sans@5.2.6':
+    resolution: {integrity: sha512-50Fqbqxctchje/HIbzNMy3h8RATVyQY3BkjPeUNvKIq2vKTOR5KxF728kpDT9CZInEyPtfAGy80ex/omLAxz1A==}
 
   '@fontsource/anton@5.1.1':
     resolution: {integrity: sha512-PbKqw6qNhRkyf7TRLS1JoQR7fp504o60VveuzFOO3SO33lsfE6GqEdDeVd1LLePKWkgHxIpU0ypW3pNu1unrQg==}
@@ -4001,7 +4001,7 @@ snapshots:
       '@eslint/core': 0.12.0
       levn: 0.4.1
 
-  '@fontsource-variable/noto-sans@5.1.1': {}
+  '@fontsource-variable/noto-sans@5.2.6': {}
 
   '@fontsource/anton@5.1.1': {}
 
