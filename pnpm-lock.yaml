@@ -22,7 +22,7 @@ importers:
         version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.8
-        version: 4.0.14(vite@6.2.2(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
+        version: 4.0.14(vite@6.2.3(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))
       '@types/react':
         specifier: ^19.0.10
         version: 19.0.11
@@ -59,7 +59,7 @@ importers:
     devDependencies:
       '@eslint/js':
         specifier: ^9.21.0
-        version: 9.22.0
+        version: 9.23.0
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.0.14)
@@ -442,10 +442,6 @@ packages:
 
   '@eslint/eslintrc@3.3.1':
     resolution: {integrity: sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@eslint/js@9.22.0':
-    resolution: {integrity: sha512-vLFajx9o8d1/oL2ZkpMYbkLv8nDB6yaIwFNt7nI4+I80U/z03SxmfOMsLbvWr3p7C+Wnoh//aOu2pQW8cS0HCQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/js@9.23.0':
@@ -3969,8 +3965,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/js@9.22.0': {}
-
   '@eslint/js@9.23.0': {}
 
   '@eslint/object-schema@2.1.6': {}
@@ -4417,13 +4411,13 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.0.14
 
-  '@tailwindcss/vite@4.0.14(vite@6.2.2(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.14(vite@6.2.3(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.0.14
       '@tailwindcss/oxide': 4.0.14
       lightningcss: 1.29.2
       tailwindcss: 4.0.14
-      vite: 6.2.2(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
+      vite: 6.2.3(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.85.0)(yaml@2.7.0)
 
   '@trysound/sax@0.2.0': {}
 
