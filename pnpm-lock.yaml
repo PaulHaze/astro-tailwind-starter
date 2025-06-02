@@ -16,7 +16,7 @@ importers:
         version: 4.2.4(@types/node@22.13.4)(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.85.0)(yaml@2.7.0)
       '@fontsource-variable/noto-sans':
         specifier: ^5.2.6
-        version: 5.2.6
+        version: 5.2.7
       '@fontsource/anton':
         specifier: ^5.2.5
         version: 5.2.5
@@ -462,8 +462,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource-variable/noto-sans@5.2.6':
-    resolution: {integrity: sha512-50Fqbqxctchje/HIbzNMy3h8RATVyQY3BkjPeUNvKIq2vKTOR5KxF728kpDT9CZInEyPtfAGy80ex/omLAxz1A==}
+  '@fontsource-variable/noto-sans@5.2.7':
+    resolution: {integrity: sha512-VaA+clV7xTOx+pSOdyjr9nR7khjrJGr7ZHs2KXlx+AqLyG/SUVBadNwauCH0rvF/eZkZr67neNxdKMOLtVxweg==}
 
   '@fontsource/anton@5.2.5':
     resolution: {integrity: sha512-nrydB9HkZiFN7VaFwSFnJW9BhrRmbt1/2sb7wm8pw0OQ3tWzfIKDG634qv6kX1047SCP/037qhWX+Eoh+oxLGA==}
@@ -2053,8 +2053,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  immutable@5.1.1:
-    resolution: {integrity: sha512-3jatXi9ObIsPGr3N5hGw/vWWcTkq6hUYhpQz4k0wLC+owqWi/LiugIw9x0EdNZ2yGedKN/HzePiBvaJRXa0Ujg==}
+  immutable@5.1.2:
+    resolution: {integrity: sha512-qHKXW1q6liAk1Oys6umoaZbDRqjcjgSrbnrifHsfsttza7zcvRAsL7mMV6xWcyhwQy7Xj5v4hhbr6b+iDYwlmQ==}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -4055,7 +4055,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@fontsource-variable/noto-sans@5.2.6': {}
+  '@fontsource-variable/noto-sans@5.2.7': {}
 
   '@fontsource/anton@5.2.5': {}
 
@@ -5883,7 +5883,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  immutable@5.1.1:
+  immutable@5.1.2:
     optional: true
 
   import-fresh@3.3.1:
@@ -6981,7 +6981,7 @@ snapshots:
   sass@1.85.0:
     dependencies:
       chokidar: 4.0.3
-      immutable: 5.1.1
+      immutable: 5.1.2
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
