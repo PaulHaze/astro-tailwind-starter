@@ -1,96 +1,59 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { cn } from '@/utils';
 ---
 
-<button
-	id="header-theme-button"
-	aria-label={`Toggle light and dark theme`}
-	class={cn(
-		'flex',
-		'size-9 rounded-full p-2 items-center justify-center',
-		'hover:bg-black/5 dark:hover:bg-white/20',
-		'stroke-current hover:stroke-black hover:dark:stroke-white',
-		'transition-colors duration-300 ease-in-out'
-	)}
->
-	<svg class="block size-full bg-transparent dark:hidden">
-		<use href="/ui.svg#sun"></use>
-	</svg>
-	<svg class="hidden size-full bg-transparent dark:block">
-		<use href="/ui.svg#moon"></use>
-	</svg>
-</button>
+<theme-toggle>
+	<button
+		type="button"
+		aria-label="Toggle light and dark theme"
+		class={cn(
+			'flex',
+			'size-9 items-center justify-center rounded-full p-2',
+			'hover:bg-black/5 dark:hover:bg-white/20',
+			'hover:text-black dark:hover:text-white',
+			'transition-colors duration-300 ease-in-out'
+		)}
+	>
+		<Icon
+			name="lucide:sun"
+			class="block size-full dark:hidden"
+			aria-hidden="true"
+		/>
+		<Icon
+			name="lucide:moon"
+			class="hidden size-full dark:block"
+			aria-hidden="true"
+		/>
+	</button>
+</theme-toggle>
 
-<script is:inline>
-	function changeTheme() {
-		const element = document.documentElement;
-		const theme = element.classList.contains('dark') ? 'light' : 'dark';
+<script>
+	// The initial theme is applied by the inline script in Layout.astro.
+	function toggleTheme() {
+		const root = document.documentElement;
+		const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
 
+		// Suppress CSS transitions while the theme swaps so colours don't animate.
 		const css = document.createElement('style');
-
-		css.appendChild(
-			document.createTextNode(
-				`* {
-           -webkit-transition: none !important;
-           -moz-transition: none !important;
-           -o-transition: none !important;
-           -ms-transition: none !important;
-           transition: none !important;
-        }`
-			)
-		);
+		css.textContent = '*, *::before, *::after { transition: none !important; }';
 		document.head.appendChild(css);
 
-		if (theme === 'dark') {
-			element.classList.add('dark');
-			element.setAttribute('data-theme', 'dark');
-		} else {
-			element.classList.remove('dark');
-			element.setAttribute('data-theme', 'light');
-		}
+		root.dataset.theme = theme;
+		localStorage.setItem('theme', theme);
 
-		// window.getComputedStyle(css).opacity;
-		document.head.removeChild(css);
-		localStorage.theme = theme;
+		// Force a style recalc so the new theme lands before transitions return.
+		void window.getComputedStyle(css).opacity;
+		css.remove();
 	}
 
-	function preloadTheme() {
-		const theme = (() => {
-			const userTheme = localStorage.theme;
-
-			if (userTheme === 'light' || userTheme === 'dark') {
-				return userTheme;
-			} else {
-				return window.matchMedia('(prefers-color-scheme: dark)').matches
-					? 'dark'
-					: 'light';
-			}
-		})();
-
-		const element = document.documentElement;
-
-		if (theme === 'dark') {
-			element.classList.add('dark');
-			element.setAttribute('data-theme', 'dark');
-		} else {
-			element.classList.remove('dark');
-			element.setAttribute('data-theme', 'light');
+	// A custom element wires itself up wherever it's rendered, including after
+	// <ClientRouter /> navigations, without needing ids or lifecycle events.
+	class ThemeToggle extends HTMLElement {
+		connectedCallback() {
+			this.querySelector('button')?.addEventListener('click', toggleTheme);
 		}
-
-		localStorage.theme = theme;
 	}
 
-	window.onload = () => {
-		function initializeThemeButtons() {
-			const headerThemeButton = document.getElementById('header-theme-button');
-			headerThemeButton?.addEventListener('click', changeTheme);
-		}
-
-		document.addEventListener('astro:after-swap', initializeThemeButtons);
-		initializeThemeButtons();
-	};
-
-	document.addEventListener('astro:after-swap', preloadTheme);
-
-	preloadTheme();
+	customElements.define('theme-toggle', ThemeToggle);
 </script>

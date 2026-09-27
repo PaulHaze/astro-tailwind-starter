@@ -4,4 +4,6 @@
       "mode": "auto"
     }
   ],
+  "eslint.validate": ["javascript", "typescript", "typescriptreact", "astro"],
+  "tailwindCSS.classFunctions": ["cn", "clsx"]
 }
